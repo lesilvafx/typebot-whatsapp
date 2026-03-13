@@ -1187,29 +1187,7 @@ loadWaveSurferScript(() => {
     observeShadowDOMForAudio();
 });
 
-// ===== AUMENTAR ESPAÇO DO LADO DIREITO DO BALÃO =====
 
-setTimeout(() => {
-
-  const typebot = document.querySelector("typebot-standard");
-  if (!typebot || !typebot.shadowRoot) return;
-
-  const style = document.createElement("style");
-
-  style.innerHTML = `
-  
-  .typebot-host-bubble{
-      padding-right:20px !important;
-  }
-
-  .typebot-guest-bubble{
-      padding-right:20px !important;
-  }
-
-  `;
-
-  typebot.shadowRoot.appendChild(style);
-
-}, 1000);
 
 }
+
