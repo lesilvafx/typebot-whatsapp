@@ -1187,28 +1187,6 @@ loadWaveSurferScript(() => {
     observeShadowDOMForAudio();
 });
 
-// ===== MOVER TEXTO UM POUCO PARA ESQUERDA =====
-
-setTimeout(() => {
-
-  const typebot = document.querySelector("typebot-standard");
-  if (!typebot || !typebot.shadowRoot) return;
-
-  const style = document.createElement("style");
-
-  style.innerHTML = `
-  
-  .typebot-host-bubble p,
-  .typebot-guest-bubble p{
-      margin-right:8px !important;
-  }
-
-  `;
-
-  typebot.shadowRoot.appendChild(style);
-
-}, 1000);
-
 
 
 
