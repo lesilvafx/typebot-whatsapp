@@ -1187,7 +1187,7 @@ loadWaveSurferScript(() => {
     observeShadowDOMForAudio();
 });
 
-// ===== AUMENTAR ESPAÇO DO LADO ESQUERDO DO BALÃO =====
+// ===== AUMENTAR ESPAÇO DO LADO DIREITO DO BALÃO =====
 
 setTimeout(() => {
 
@@ -1199,11 +1199,11 @@ setTimeout(() => {
   style.innerHTML = `
   
   .typebot-host-bubble{
-      padding-left:20px !important;
+      padding-right:20px !important;
   }
 
   .typebot-guest-bubble{
-      padding-left:20px !important;
+      padding-right:20px !important;
   }
 
   `;
