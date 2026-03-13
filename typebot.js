@@ -1188,5 +1188,55 @@ loadWaveSurferScript(() => {
 });
 
 
+
+
+
+  // ===== CORREÇÃO DE TAMANHO E ALINHAMENTO DOS BALÕES =====
+
+setTimeout(() => {
+  const typebot = document.querySelector('typebot-standard');
+
+  if (!typebot || !typebot.shadowRoot) return;
+
+  const style = document.createElement("style");
+
+  style.innerHTML = `
+  
+  /* aumentar tamanho do balão */
+  .typebot-host-bubble,
+  .typebot-guest-bubble{
+      padding:12px 60px 12px 14px !important;
+      font-size:15px !important;
+      line-height:1.5 !important;
+      display:inline-flex !important;
+      align-items:center !important;
+      position:relative;
+      max-width:75% !important;
+      border-radius:10px !important;
+  }
+
+  /* texto interno */
+  .typebot-host-bubble p,
+  .typebot-guest-bubble p{
+      margin:0 !important;
+  }
+
+  /* horário da mensagem */
+  .hora,
+  .hora2{
+      position:absolute !important;
+      bottom:4px !important;
+      right:6px !important;
+      font-size:11px !important;
+      color:#667781 !important;
+  }
+
+  `;
+
+  typebot.shadowRoot.appendChild(style);
+
+},1000);
+
 }
+
 
